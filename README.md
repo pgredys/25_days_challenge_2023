@@ -1,2 +1,2 @@
-# 25_days_challenge_2023
+# 25 days challenge 2023
 Advent of Code 2023
