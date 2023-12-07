@@ -67,6 +67,4 @@ def second_answer(time, distance):
 if __name__ == '__main__':
     file_path = 'race.txt'
     print(f'First: {first_answer(file_path)}')
-    # print(len(second_answer(71530, 940200))) # test
-    print(f'Second: {len(second_answer(46828479, 347152214061471))}')
     print(f'Second: {len(win_ways(46828479, 347152214061471))}')
