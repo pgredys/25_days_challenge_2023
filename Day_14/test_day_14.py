@@ -3,7 +3,7 @@ import sys
 import time
 import unittest
 
-from Day_14.day_14 import first_answer
+from Day_14.day_14 import *
 
 logger = logging.getLogger(__name__)
 logging.disable(logging.NOTSET)
@@ -31,6 +31,20 @@ class MyTestCase(unittest.TestCase):
         path = 'rocks.txt'
         ans = first_answer(path)
         self.assertEqual(ans, 108641)
+
+    def test_second_test_brut(self):
+        path = 'rocks_test.txt'
+        cycle_num = 1_000
+        rocks = import_data(path)
+        ans = get_load(move_cycles(rocks, cycle_num))
+        self.assertEqual(64, ans)
+
+    def test_second_brut(self):
+        path = 'rocks.txt'
+        cycle_num = 1_000
+        rocks = import_data(path)
+        ans = get_load(move_cycles(rocks, cycle_num))
+        self.assertEqual(64, ans)
 
 
 if __name__ == '__main__':
