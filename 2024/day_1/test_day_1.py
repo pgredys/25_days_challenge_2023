@@ -18,6 +18,14 @@ class Day1(unittest.TestCase):
         answer = day_1.task_0('input.txt')
         self.assertEqual(answer, 1660292)
 
+    def test_task1_test(self):
+        test_answer = day_1.task_1('test.txt')
+        self.assertEqual(test_answer, 31)
+
+    def test_task1(self):
+        answer = day_1.task_1('input.txt')
+        self.assertEqual(answer, 22776016)
+
 
 if __name__ == '__main__':
     unittest.main()
