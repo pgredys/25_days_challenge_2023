@@ -22,8 +22,24 @@ def task_0(file_name: str) -> int:
     total_distance = sum(distances)
     return total_distance
 
+def task_1(file_name: str) -> Any:
+    imported = import_data(file_name)
+    col0, col1 = separate_columns(imported)
+
+    similarity_score = 0
+    for number in col0:
+        similarity_score += number * col1.count(number)
+    return similarity_score
+
+
 if __name__ == '__main__':
     # task 0:
     print('First task')
-    print(f'Test answer: {task_0("test.txt")}')
-    print(f'Final answer: {task_0("input.txt")} \n__________________________')
+    print(f'Test answer: {task_0("test.txt")}')   # expected: 11
+    print(f'Final answer: {task_0("input.txt")} ' # expected: 1660292
+          f'\n__________________________\n')
+
+    # task 1:
+    print('Second task')
+    print(f'Test answer: {task_1("test.txt")}')  # expected: 31
+    print(f'Final answer: {task_1("input.txt")}')  # expected: 22776016
